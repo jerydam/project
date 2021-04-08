@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+  <link rel="stylesheet" type="text/css" href="obj.css">
+<body >
+<!-- 	<input type="" id="prop" name="" SSplaceholder="Property">
+	<input type="" id="val" name="" placeholder="Value">
+	<button onclick="display()">Add</button> -->
+
+<center><div id="container">
+	<br>	<br>	
+<div class="yes" id="res"></div> <br>	<br>	
+		
+	<input type="number"  id="hr"  class="what" name="">  	
+	<input type="number"   id="min" class="what"  name="">  <br>	<br>	
+
+	
+	<button class="butt" onclick="set()">Set</button>
+	<button class="butt"onclick="stop()">Stop</button>
+	<!-- <button class="butt"onclick="snooze()">Snooze</button> -->
+	<audio id="aud" src="bra.mp3"></audio>
+
+
+<div id="demo"></div>
+</center>
+</div>
+<script type="text/javascript">
+function time() {
+		 anything = new Date();
+		 a =anything.getHours();
+		 b =anything.getMinutes();
+		 c=anything.getSeconds();
+		 d = a+':' + b +':'+c;
+		res.innerHTML=d;
+		setTimeout( time, 1000)
+		 
+		
+
+	}
+		time();
+
+		function set() {
+
+    setmytime = setTimeout(set, 1000)
+    if ((hr.value == anything.getHours() && min.value ==b) ) {
+         document.getElementById('aud').play();
+
+    }
+    else if ((hr.value <= anything.getHours()) &&(min.value <= anything.getMinutes())) {
+     demo.innerHTML="the time is past";
+        
+    }
+  
+  }
+  		function stop() {
+  			rad1 =Math.floor(Math.random() *10)+1;
+ rad2 =Math.floor(Math.random() *10)+1;
+ var result =prompt(rad1 +"+"+ rad2);
+var finalresult = rad1 + rad2;
+if (result== rad1+rad2 ) {
+  document.getElementById('aud').pause();
+  clearInterval(setmytime);
+  audio.pause();
+  
+}else{
+ document.getElementById('aud').play();
+}
+
+  		}
+  		// function snooze() {
+  		// 	document.getElementById('aud').pause();
+    //   min.value= parseInt(min.value) + 1 ;
+    //   if (min.value>59) {
+    //     min.value++;
+    //     min.value=00;
+  		// }
+  	// }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+	#container {
+   			box-sizing: border-box;
+   			border: 2px solid black;
+   			width: 300px;
+   			height: 300px;
+        border-radius:100%;
+   			background-color: blue;
+   		}
+      .butt{
+        border: 0px;
+        border-radius: 10px;
+      }
+   		.what {
+   			border:1px solid red;
+   			width: 40px;
+   			height: 30px;
+   			background-color: yellow;
+        border-radius: 50%;	
+   		}
+   		.yes {
+   			border: 1px;
+   			width: 30px;
+   			height: 30px;
+   			font-size: 50px;
+   			margin-left:-120px;
+   		}
